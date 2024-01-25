@@ -1,15 +1,29 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        String info = "Молоко: 256, масло: 321, печенье: 54, шоколад: 32";
+        System.out.println(info.replaceAll("м","1")); //заменяет сисвол.
+        // regex101.com - сайт для проверки регулярок
+        // \\s - все пробельные символы
+        // \\d - все цифры
+        // \\w - слово, анг буквы
+        // \\S - всё крому пробелов
+        // \\D - всё кроме цифр
+        // \\W - всё кроме слов
+        // [] - прописать перечень для замены
+        // . - любой символ
+        // .+ -  . любой символ + один или более
+        // ----- Квантары -----
+        // *  - 0 или больше вхождений
+        // + - одно или более вхождение
+        // ? - ноль или одно вхождение
+        // {} - задает минимальное количество символов под замену, также можно задать интервал [от 3 до 5]
+        String info1 = "756776465";
+        System.out.println(info1.replaceAll("(\\d{3})(\\d{4})","$1 -$2"));
+        System.out.println(info1.replaceAll("(\\d{3})(\\d{4})","$2 -$1")); // $ - группа
+        System.out.println(info1.replaceAll("(\\d{3})(.+)","$2 -$1"));
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+
+
     }
 }

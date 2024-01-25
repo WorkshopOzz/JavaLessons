@@ -1,15 +1,44 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Main {
+    static int x = 0;
+    static int y = 0;
+
+    public static void main(String[] args) {
+        while (true) {
+            int command = inputCommand();
+            if (command == 1) {
+                y -= inputSteps();
+            } else if (command == 2) {
+                y += inputSteps();
+            } else if (command == 3) {
+                x += inputSteps();
+            } else if (command == 4) {
+                x -= inputSteps();
+            } else if (command == 5) {
+                printXY();
+            } else {
+                errorInput();
+            }
+            }
+
+        }
+
+        private static void printXY () {
+            System.out.println("Robot coordinates x " + x + " Y " + y);
+        }
+
+        private static int inputSteps () {
+            System.out.println("enter the number of steps");
+            return new Scanner(System.in).nextInt();
+        }
+
+        private static int inputCommand () {
+            System.out.println("Input command;\n1 - go up\n2 - go down\n3 -  go right\n4 - go left\n5 - output of robot coordinates");
+            return new Scanner(System.in).nextInt();
+
+        }
+        private static void errorInput () {
+            System.out.println("Error command. Try again.");
         }
     }
-}
