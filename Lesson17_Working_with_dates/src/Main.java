@@ -40,7 +40,7 @@ public class Main {
         LocalDate date3 = LocalDate.now();
         System.out.println(date3);
         LocalDate date4 = LocalDate.of(2008, 2,10);
-        LocalTime Time = LocalTime.now();
+        LocalTime time = LocalTime.now();
         LocalDateTime dateTime = LocalDateTime.now();
         System.out.println(dateTime);
         date3.isAfter(date4);
@@ -53,6 +53,7 @@ public class Main {
         Date date5 = new Date();
         System.out.println(dataFormat.format(date5));
 //        Localdate формат вывода даты
+
         LocalDate date6 = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         System.out.println(formatter.format(date6));
