@@ -12,6 +12,7 @@ public class Wine {
     private String countryOfOrigin;
     private String bottlingDate;
     private String description;
+    private LocalDate date; // задать можно с помощью LocalDate.of(2001,1,1)
 
    public String infoWineAging () {
        String infoWinAging = "Нет данных";
@@ -31,6 +32,13 @@ public class Wine {
 
        return  infoWinAging;
    }
+   public void winePeriod(LocalDate now) {
+       int years = Period.between(date,now).getYears();
+       System.out.println("Выдержка вина " + getName());
+   }
+    public Wine() {
+    }
+
     public Wine(String lable, String name, String countryOfOrigin, String bottlingDate, String description) {
         this.label = lable;
         this.name = name;
@@ -42,6 +50,8 @@ public class Wine {
      String info = "Марка вина: " + getLabel() + "\n" + "Название вина: " + getName() + "\n" + "Дата сбора урожая: " + getBottlingDate() + "\n" + "Страна происхождения: " + getCountryOfOrigin() + "\n" + "Описание: " + getDescription();
    return info;
    }
+
+
 
     public String getLabel() {
         return label;
