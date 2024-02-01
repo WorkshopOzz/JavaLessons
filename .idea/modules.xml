@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Lesson18_Advanced OOP_Inheritance/HW18/HW18.iml" filepath="$PROJECT_DIR$/Lesson18_Advanced OOP_Inheritance/HW18/HW18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson19_Advanced_OOP.Abstract_classes_and_polymorphism/HW19/HW19.iml" filepath="$PROJECT_DIR$/Lesson19_Advanced_OOP.Abstract_classes_and_polymorphism/HW19/HW19.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson17_Working_with_dates/HW_Dates/HW_Dates.iml" filepath="$PROJECT_DIR$/Lesson17_Working_with_dates/HW_Dates/HW_Dates.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaLessons.iml" filepath="$PROJECT_DIR$/.idea/JavaLessons.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson10_Methods_part2/Lesson10_Methods_part2.iml" filepath="$PROJECT_DIR$/Lesson10_Methods_part2/Lesson10_Methods_part2.iml" />
@@ -14,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/Lesson16_Strings_RegEx/Lesson16_Strings_RegEx.iml" filepath="$PROJECT_DIR$/Lesson16_Strings_RegEx/Lesson16_Strings_RegEx.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson17_Working_with_dates/Lesson17_Working_with_dates.iml" filepath="$PROJECT_DIR$/Lesson17_Working_with_dates/Lesson17_Working_with_dates.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson18_Advanced OOP_Inheritance/Lesson18_Advanced OOP_Inheritance.iml" filepath="$PROJECT_DIR$/Lesson18_Advanced OOP_Inheritance/Lesson18_Advanced OOP_Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson19_Advanced_OOP.Abstract_classes_and_polymorphism/Lesson19_Advanced_OOP.Abstract_classes_and_polymorphism.iml" filepath="$PROJECT_DIR$/Lesson19_Advanced_OOP.Abstract_classes_and_polymorphism/Lesson19_Advanced_OOP.Abstract_classes_and_polymorphism.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson7_Loops/Lesson7_Loops.iml" filepath="$PROJECT_DIR$/Lesson7_Loops/Lesson7_Loops.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson8_Array/Lesson8_Array.iml" filepath="$PROJECT_DIR$/Lesson8_Array/Lesson8_Array.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson9_Methods/Lesson9_Methods.iml" filepath="$PROJECT_DIR$/Lesson9_Methods/Lesson9_Methods.iml" />
