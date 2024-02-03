@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Lesson18_Advanced OOP_Inheritance/HW18/HW18.iml" filepath="$PROJECT_DIR$/Lesson18_Advanced OOP_Inheritance/HW18/HW18.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson19_Advanced_OOP.Abstract_classes_and_polymorphism/HW19/HW19.iml" filepath="$PROJECT_DIR$/Lesson19_Advanced_OOP.Abstract_classes_and_polymorphism/HW19/HW19.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson20_Intriduction_to_interfaces/HW20/HW20.iml" filepath="$PROJECT_DIR$/Lesson20_Intriduction_to_interfaces/HW20/HW20.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson17_Working_with_dates/HW_Dates/HW_Dates.iml" filepath="$PROJECT_DIR$/Lesson17_Working_with_dates/HW_Dates/HW_Dates.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaLessons.iml" filepath="$PROJECT_DIR$/.idea/JavaLessons.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson10_Methods_part2/Lesson10_Methods_part2.iml" filepath="$PROJECT_DIR$/Lesson10_Methods_part2/Lesson10_Methods_part2.iml" />
