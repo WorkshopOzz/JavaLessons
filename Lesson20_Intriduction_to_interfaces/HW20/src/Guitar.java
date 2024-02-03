@@ -5,6 +5,6 @@ public class Guitar implements Musician {
 
     @Override
     public void perfom() {
-
+play();
     }
 }

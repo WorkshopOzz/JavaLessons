@@ -5,6 +5,6 @@ public class Piano implements Musician {
 
     @Override
     public void perfom() {
-
+play();
     }
 }
