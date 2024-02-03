@@ -3,8 +3,8 @@ public class Main {
         Piano piano = new Piano();
         Guitar guitar = new Guitar();
         Flute flute = new Flute();
-        piano.perfom();
-        guitar.perfom();
-        flute.perfom();
+        Musician musician = new Musician();
+        musician.perform(guitar);
+        musician.perform(piano);
     }
 }

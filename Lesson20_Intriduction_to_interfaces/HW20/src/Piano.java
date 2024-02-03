@@ -1,10 +1,6 @@
-public class Piano implements Musician {
-    public void play(){
-        System.out.println("пам-пам-пам-вжунь");
-    }
-
+public class Piano implements Playable {
     @Override
-    public void perfom() {
-play();
+    public void play() {
+        System.out.println("пам-пам-пам-вжунь");
     }
 }

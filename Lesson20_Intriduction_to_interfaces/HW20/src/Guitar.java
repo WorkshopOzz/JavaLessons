@@ -1,10 +1,6 @@
-public class Guitar implements Musician {
-    public void play(){
-        System.out.println("трынь-брынь-брынь-трынь");
-    }
-
+public class Guitar implements Playable {
     @Override
-    public void perfom() {
-play();
+    public void play() {
+        System.out.println("трынь-брынь-брынь-трынь");
     }
 }

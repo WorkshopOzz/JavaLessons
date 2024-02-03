@@ -1,3 +1,5 @@
-public interface Musician {
-    public void perfom();
+public class Musician {
+    public void perform(Playable instrument){
+        instrument.play();
+    }
 }
