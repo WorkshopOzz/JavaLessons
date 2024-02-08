@@ -66,10 +66,11 @@ public class Main {
     public static Integer index(String inputToDoList) {
         String[] inputCutText = inputToDoList.split(" ");
         System.out.println(inputCutText[1]);
-        boolean test = inputCutText[1].matches("\\d");
+        String testReg = inputCutText[1].replaceAll("\\D", " ").trim();
+        boolean test = testReg.matches("\\d+");
         System.out.println(test);
 
-        if (inputCutText[1].matches("1234567890")) {
+        if (inputCutText[1].matches("\\d+")) {
             String index = inputCutText[1];
             System.out.println(index);
             return Integer.parseInt(index);
