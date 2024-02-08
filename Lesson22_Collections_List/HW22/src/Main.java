@@ -5,77 +5,86 @@ import java.util.Scanner;
 
 public class Main {
     private static List<String> toDoList = new ArrayList<>();
-    public String error = "Дела с таким индексом нет!";
 
     public static void main(String[] args) {
         //todo для выполнения дз создавать классы не нужно. Просто создавайте
         // необходимые вам методы и переменные. Основная логика программы будет в методе main
-        String inputToDoList = new Scanner(System.in).toString();
-    }
+        System.out.println("Введите команду");
+        String inputToDoList = new Scanner(System.in).nextLine();
+        toDoList.add("Buy 1");
+        toDoList.add("Buy 2");
+        toDoList.add("Buy 3");
+        toDoList.add("Buy 4");
 
-    public String command(String inputToDoList) {
-        String[] inputCutText = inputToDoList.split(" ", 1);
-       return inputCutText[0];
-    }
-
-    public Integer index(String inputToDoList) {
-        String[] inputCutText = inputToDoList.split(" ", 1);
-        if (!inputCutText[1].matches("d")) {
-            return null;
-        }
-
-        return Integer.parseInt(String.valueOf(inputToDoList.charAt(1)));
-    }
-
-    public String textCase(String inputToDoList) {
-        String[] inputCutText = inputToDoList.split(" ", 1);
-        return inputCutText[2];
-    }
+        System.out.println("Comand: " + command(inputToDoList));
+        System.out.println("TextCase: " + textCase(inputToDoList));
+        System.out.println("Index: " + index(inputToDoList));
 
 
-    public String inputCase() {
-        String inputCase = new Scanner(System.in).toString();
-        String[] inputCutText = inputCase.split(" ");
-        String command = inputCutText[0];
-        String textCase;
-        Integer index;
-        if (inputCutText[1].matches("d")) {
-            Integer index1 = Integer.parseInt(String.valueOf(inputCase.charAt(1)));
-            index = index1;
-            for (int i = 2; i <= inputCutText.length; i++) {
-                String textCase1 = inputCutText[i] + " ";
-                textCase = textCase1;
-            }
-
-        } else {
-            for (int i = 2; i <= inputCutText.length; i++) {
-                String textCase1 = inputCutText[i] + " ";
-                textCase = textCase1;
-            }
-        }
-        if (inputCutText[0].matches("Добавить")) {
-            if (inputCutText[1].matches("d")) {
-//                   добавляем номер дела
+       /* if (command(inputToDoList).equals("Добавить")) {
+            if (checkIndex(index(inputToDoList))) {
+                toDoList.set(index(inputToDoList), textCase(inputToDoList));
+                System.out.println("Нет места под номером " + index(inputToDoList) + "." + " Дело " + textCase(inputToDoList) + " добавлено в конец списка.");
             } else {
-//                   добавляем в конец списка
-            }
+                toDoList.set(index(inputToDoList)+1, textCase(inputToDoList));
+                System.out.println("Добавлено дело: " + textCase(inputToDoList));
+                   }
+        }
 
-        } else if (inputCutText[0].matches("Удалить")) {
-            Integer index = Integer.parseInt(String.valueOf(inputCase.charAt(1)));
-            if (!checkIndex(index)) {
-                System.out.println(" Дела с таким индексом нет!");
-                return error;
-            }
+        if (command(inputToDoList).equals("Удалить")) {
+            if (checkIndex(index(inputToDoList))) {
+                System.out.println("Дела под номером " + index(inputToDoList) + " нет!");
+            } else toDoList.remove(index(inputToDoList));
+            System.out.println("Удалено дело: " + textCase(inputToDoList));
+        }
 
-        } else if (inputCutText[0].matches("Изменить")) {
-            Integer index = Integer.parseInt(String.valueOf(inputCase.charAt(1)));
-            if (!checkIndex(index)) {
-                System.out.println(" Дела с таким индексом нет!");
-                return error;
+        if (command(inputToDoList).equals("Изменить")) {
+            if (checkIndex(index(inputToDoList))) {
+                System.out.println("Дела под номером " + index(inputToDoList) + " нет!");
+            } else {
+                String unchange = toDoList.get(index(inputToDoList));
+                toDoList.add(index(inputToDoList), textCase(inputToDoList));
+                System.out.println("Дело " + unchange + " изменено на " + textCase(inputToDoList));
             }
         }
 
-        return command,textCase;
+        if (command(inputToDoList).equals("Печать")) {
+            for (int i = 0; i < toDoList.size(); i++) {
+                System.out.println("Дело: " + toDoList.get(i));
+            }
+        }*/
+        System.out.println("Выполнение программы завершено");
+    }
+
+    public static String command(String inputToDoList) {
+        String[] inputCutText = inputToDoList.split(" ", 2);
+
+//            System.out.println(Arrays.toString(inputCutText));
+        return inputCutText[0];
+    }
+
+    public static Integer index(String inputToDoList) {
+        String[] inputCutText = inputToDoList.split(" ");
+        System.out.println(inputCutText[1]);
+        boolean test = inputCutText[1].matches("\\d");
+        System.out.println(test);
+
+        if (inputCutText[1].matches("1234567890")) {
+            String index = inputCutText[1];
+            System.out.println(index);
+            return Integer.parseInt(index);
+        } else {
+            return toDoList.size();
+        }
+    }
+
+    public static String textCase(String inputToDoList) {
+        String[] inputCutText = inputToDoList.split(" ", 2);
+        return inputCutText[1];
+    }
+
+    public void databaseOperation(String command, Integer index, String textCase) {
+
     }
 
     public void printAll() {
