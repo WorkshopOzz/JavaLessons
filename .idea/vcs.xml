@@ -2,5 +2,16 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson10_Methods_part2/hW10" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson10_Methods_part2/hW10/HW10" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson11_OPP/hW11" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson12_Encapsulation/hW12" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson13_OOP_Constant_Enum/hW13" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson14_Memory_Strings/hW14" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson15_Strings_continued_String_Methods/hW15" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson16_Strings_RegEx/hW16" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson7_Loops/hW7" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson8_Array/hW8" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson9_Methods/hW9" vcs="Git" />
   </component>
 </project>
