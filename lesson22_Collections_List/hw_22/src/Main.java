@@ -13,11 +13,17 @@ public class Main {
         operation("Добавить дело 2");
         operation("Добавить дело 3");
         operation("Добавить дело 4");
+//        Тест
+        /* operation("Добавить 1 посмотреть фильм");
+        operation("Добавить 21 купить машину");
+        operation("Удалить 43");
+        operation("Изменить 2 выпить молока");
+        operation("Печать");*/
         while (true) {
             String output = inputToDolist();
             operation(output);
             System.out.println("*************************************");
-
+//     Первая версия
        /* if (command(inputToDoList).equals("Добавить")) {
               if (!checkIndex(index(inputToDoList)) && index(inputToDoList) > toDoList.size()) {
                 toDoList.add(toDoList.size(), textCase(inputToDoList));
@@ -58,6 +64,7 @@ public class Main {
 
             printAll(toDoList);
             if (output.equals("Выход")) {
+                System.out.println("Конец выполнения программы");
                 break;
             }
         }
@@ -67,22 +74,41 @@ public class Main {
         System.out.println("Введите команду");
         return new Scanner(System.in).nextLine();
     }
+
     public static String command(String input) {
         String[] inputCutText = input.split(" ", 2);
 
 //            System.out.println(Arrays.toString(inputCutText));
         return inputCutText[0];
     }
+
     public static String textCase(String inputTo) {
-        String[] input = inputTo.split(" ", 2);
-        String inputCutText = input[1];
-        inputCutText = inputCutText.replaceAll("\\d+", " ").trim();
-        return inputCutText;
+//     Первая версия
+       /* String[] input = inputTo.split(" ", 2);
+        if (input[1].matches("(^\\d+)")) {
+            String[] textCase = input[1].split("\\d+", 2);
+            //            inputCutText = inputCutText.replaceAll("\\d+", " ").trim();
+            return textCase[1];
+
+        } else {
+            return input[1];
+
+        }*/
+        String[] splitText = inputTo.split(" ", 3);
+        if (splitText[1].matches("\\d+")) {
+//            System.out.println("work");
+            return splitText[2];
+        } else {
+            String[] split = inputTo.split(" ", 2);
+            return split[1];
+        }
     }
+
     private static boolean checkIndex(Integer index) {
         return toDoList.size() > index;
 //    System.out.println("Нет такого индекса!");
     }
+
     public static void operation(String input) {
         if (command(input).equals("Добавить")) {
             /*if (!checkIndex(index(input)) && index(input) > toDoList.size()) {
@@ -122,7 +148,8 @@ public class Main {
         }
 
     }
-        public static void add(String input) {
+
+    public static void add(String input) {
         if (!checkIndex(index(input)) && index(input) > toDoList.size()) {
             toDoList.add(toDoList.size(), textCase(input));
             System.out.println("Нет дела под номером " + index(input) + "." + " Дело: \"" + textCase(input) + "\" -" + " добавлено в конец списка.");
@@ -132,10 +159,11 @@ public class Main {
 
         } else {
             toDoList.add(index(input), textCase(input));
-            System.out.println("На" + index(input) + " добавлено дело: " + textCase(input));
+            System.out.println("На " + index(input) + " место добавлено дело: " + textCase(input));
         }
     }
-        public static void remove(String input) {
+
+    public static void remove(String input) {
         if (!checkIndex(index(input))) {
             System.out.println("Дела под номером " + index(input) + " нет!");
         } else {
@@ -144,7 +172,8 @@ public class Main {
             System.out.println("Удалено дело: " + todo);
         }
     }
-        public static void change(String input) {
+
+    public static void change(String input) {
         if (!checkIndex(index(input))) {
             System.out.println("Дела под номером " + index(input) + " нет!");
         } else {
@@ -154,7 +183,7 @@ public class Main {
         }
     }
 
-        public static Integer index(String input) {
+    public static Integer index(String input) {
         String[] inputCutText = input.split(" ");
 //        System.out.println(inputCutText[1]);
 //        String testReg = inputCutText[1].replaceAll("\\D", " ").trim();
@@ -170,17 +199,17 @@ public class Main {
         }
     }
 
-        public static void printAll(List toDoList) {
+    public static void printAll(List toDoList) {
         for (int i = 0; i < toDoList.size(); i++) {
             System.out.println("Дело: № " + (i + 1) + ". " + toDoList.get(i));
         }
     }
-        public static void exit(String input) {
-        if (command(input) == "Выход") {
+
+    public static void exit(String input) {
+        if (command(input).equals("Выход")) {
             System.out.println("Выполнение программы завершено");
         }
     }
-
 
 
 }
