@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
         //todo для выполнения дз создавать классы не нужно. Просто создавайте
         // необходимые вам методы и переменные. Основная логика программы будет в методе main
+        greetings();
         operation("Добавить дело 1");
         operation("Добавить дело 2");
         operation("Добавить дело 3");
@@ -22,7 +22,6 @@ public class Main {
         while (true) {
             String output = inputToDolist();
             operation(output);
-            System.out.println("*************************************");
 //     Первая версия
        /* if (command(inputToDoList).equals("Добавить")) {
               if (!checkIndex(index(inputToDoList)) && index(inputToDoList) > toDoList.size()) {
@@ -61,10 +60,8 @@ public class Main {
         if (command(inputToDoList).equals("Печать")) {
             printAll(toDoList);
         } */
-
-            printAll(toDoList);
             if (output.equals("Выход")) {
-                System.out.println("Конец выполнения программы");
+                exit();
                 break;
             }
         }
@@ -137,14 +134,17 @@ public class Main {
                 toDoList.set(index(input), textCase(input));
                 System.out.println("Дело " + unchange + " изменено на " + textCase(input));
             }*/
-            change(input);
+            edit(input);
         }
 
         if (command(input).equals("Печать")) {
             printAll(toDoList);
         }
-        if (command(input).equals("Выход")) {
-            exit(input);
+//        if (command(input).equals("Выход")) {
+//            exit();
+//        }
+        if (command(input).equals("Инфо")) {
+            info();
         }
 
     }
@@ -173,7 +173,7 @@ public class Main {
         }
     }
 
-    public static void change(String input) {
+    public static void edit(String input) {
         if (!checkIndex(index(input))) {
             System.out.println("Дела под номером " + index(input) + " нет!");
         } else {
@@ -205,11 +205,22 @@ public class Main {
         }
     }
 
-    public static void exit(String input) {
-        if (command(input).equals("Выход")) {
-            System.out.println("Выполнение программы завершено");
-        }
+    public static void exit() {
+        System.out.println("Выполнение программы завершено");
     }
 
+    public static void info() {
+        String info = "Доступные команды: \n" +
+                "Добавить {дело}\n" +
+                "Добавить {номер} {дело}\n" +
+                "Удалить {номер}\n" +
+                "Изменить {номер} {новое дело}\n" +
+                "Выход\n" + "Инфо" + "\n";
+        System.out.println(info);
+    }
+
+    public static void greetings() {
+        System.out.println("\t\tДобро пожаловать в программу \"Что делать!\"\n \t\t\tдля вызова справки наберите \"Инфо\".\n\n");
+    }
 
 }
