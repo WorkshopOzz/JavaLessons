@@ -60,7 +60,7 @@ public class Main {
         if (command(inputToDoList).equals("Печать")) {
             printAll(toDoList);
         } */
-            if (output.equals("Выход")) {
+            if (output.toLowerCase().equals("выход")) {
                 exit();
                 break;
             }
@@ -73,7 +73,7 @@ public class Main {
     }
 
     public static String command(String input) {
-        String[] inputCutText = input.split(" ", 2);
+        String[] inputCutText = input.split("\\s+", 2);
 
 //            System.out.println(Arrays.toString(inputCutText));
         return inputCutText[0];
@@ -107,7 +107,7 @@ public class Main {
     }
 
     public static void operation(String input) {
-        if (command(input).equals("Добавить")) {
+        if (command(input).toLowerCase().equals("добавить")) {
             /*if (!checkIndex(index(input)) && index(input) > toDoList.size()) {
                 toDoList.add(toDoList.size(), textCase(input));
                 System.out.println("Нет дела под номером " + index(input) + "." + " Дело: \"" + textCase(input) + "\" -" + " добавлено в конец списка.");
@@ -120,13 +120,9 @@ public class Main {
                 System.out.println("На" + index(input) + " добавлено дело: " + textCase(input));
             }*/
             add(input);
-        }
-
-        if (command(input).equals("Удалить")) {
+        } else if (command(input).toLowerCase().equals("удалить")) {
             remove(input);
-        }
-
-        if (command(input).equals("Изменить")) {
+        } else if (command(input).toLowerCase().equals("изменить")) {
            /* if (!checkIndex(index(input))) {
                 System.out.println("Дела под номером " + index(input) + " нет!");
             } else {
@@ -135,16 +131,17 @@ public class Main {
                 System.out.println("Дело " + unchange + " изменено на " + textCase(input));
             }*/
             edit(input);
-        }
-
-        if (command(input).equals("Печать")) {
+        } else if (command(input).toLowerCase().equals("печать")) {
             printAll(toDoList);
         }
-//        if (command(input).equals("Выход")) {
-//            exit();
-//        }
-        if (command(input).equals("Инфо")) {
+       else if (command(input).toLowerCase().equals("выход")) {
+           return;
+        }
+        else if (command(input).toLowerCase().equals("инфо")) {
             info();
+        }
+        else {
+            error();
         }
 
     }
@@ -200,6 +197,10 @@ public class Main {
     }
 
     public static void printAll(List toDoList) {
+        if (toDoList.isEmpty()) {
+            System.out.println("Список пуст");
+            return;
+        }
         for (int i = 0; i < toDoList.size(); i++) {
             System.out.println("Дело: № " + (i + 1) + ". " + toDoList.get(i));
         }
@@ -208,14 +209,19 @@ public class Main {
     public static void exit() {
         System.out.println("Выполнение программы завершено");
     }
-
+public static void error(){
+    System.out.println("Не верный формат команды. Для получения справки введите команду \"Инфо\"");
+}
     public static void info() {
-        String info = "Доступные команды: \n" +
-                "Добавить {дело}\n" +
-                "Добавить {номер} {дело}\n" +
-                "Удалить {номер}\n" +
-                "Изменить {номер} {новое дело}\n" +
-                "Выход\n" + "Инфо" + "\n";
+        String info = """
+                Доступные команды:
+                Добавить {дело}
+                Добавить {номер} {дело}
+                Удалить {номер}
+                Изменить {номер} {новое дело}
+                Выход
+                Инфо
+                """;
         System.out.println(info);
     }
 
