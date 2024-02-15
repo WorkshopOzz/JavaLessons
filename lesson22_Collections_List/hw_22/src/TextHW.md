@@ -51,3 +51,4 @@
 
 Совет: Для решения этого задания обратите внимание на регулярные выражения и перегруженный метод split(.., ..).
 Перегруз split https://javarush.com/groups/posts/2907-metod-split-v-java-delim-stroku-na-chasti
+Решение https://boosty.to/code_it/posts/5e921fad-6e1e-43aa-964c-7c524c02ffdd
