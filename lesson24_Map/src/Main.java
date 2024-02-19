@@ -45,7 +45,7 @@ public class Main {
         for (Map.Entry<String, Set<String>> entry : nameTodos.entrySet()){
             for (String val : entry.getValue()){
                 if(val.equals("Buy")){
-                    System.out.println(val + " contains in the to-do list " + entry.getKey());
+                    System.out.println(val + " contains in the to-do listТус " + entry.getKey());
                     isContains = true;
                 }
             }
