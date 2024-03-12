@@ -1,4 +1,6 @@
 https://docs.google.com/document/d/1eSdAVB4yIshrxw2OZbBr5OTpHWI9yOeq/edit
+https://sky.pro/wiki/java/prisoedinenie-neskolkikh-znacheniy-k-odnomu-klyuchu-v-hash-map-java/
+https://sky.pro/wiki/java/ispolzovanie-funktsii-compute-if-absent-v-java-rukovodstvo/
 1. Скопировать репозиторий hw24. https://github.com/codeIt30/HW24
 2. Напишите программу, которая будет работать как телефонная книга:
    ·Если вводим новое имя, программа просит ввести номер телефона и запоминает его.
