@@ -1,36 +1,22 @@
-import java.util.*;
-
 public class Main {
-    static Map<String, Set<String>> phoneBook = new HashMap<>();
-    static String keyName;
-    static String phoneNumbers;
     public static void main(String[] args) {
-        keyName = "Petya";
-        phoneNumbers = "89652231232";
+        errorType(Command.LIST);
 
-       phoneBook.computeIfAbsent(keyName, keyName -> new TreeSet<>()).add(phoneNumbers);
-       phoneNumbers = "89998887766";
-       phoneBook.computeIfAbsent(keyName, keyName -> new TreeSet<>()).add(phoneNumbers);
-       phoneNumbers = "89998887766";
-       keyName = "Vasya";
-       phoneNumbers = "89252546387";
-       phoneBook.computeIfAbsent(keyName, keyName -> new TreeSet<>()).add(phoneNumbers);
 
-        for (Map.Entry<String, Set<String>> entry : phoneBook.entrySet()) {
-            String name = entry.getKey();
-            System.out.println(name);
-            for (String phoneNumber : entry.getValue()) {
-                System.out.println("\t" + phoneNumber);
-            }
+
+    }
+
+    private static void errorType(Command command) {
+        switch (command){
+            case EXIT -> System.out.println("Exit");
+            case LIST -> System.out.println("List");
+            case TEST -> System.out.println("Test");
+
         }
     }
-//      keyName = "Vasya";
-//      phoneNumbers = "89252546387";
-//      PhoneList phoneList = new PhoneList(keyName);
 
 
-
-    }
+}
 
 
 
